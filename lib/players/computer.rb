@@ -30,9 +30,9 @@ module Players
 
       case
       when winning_move
-        (win_index + 1).to_s
+        (winning_move + 1).to_s
       when blocking_move
-        (block_index + 1).to_s
+        (blocking_move + 1).to_s
       when center?
         "5"
       when opposite_corner
