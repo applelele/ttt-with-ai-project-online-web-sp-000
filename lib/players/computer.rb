@@ -29,15 +29,15 @@ module Players
       valid_moves = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
       case
-      when winning_move != nil
+      when winning_move
         (win_index + 1).to_s
-      when blocking_move != nil
+      when blocking_move
         (block_index + 1).to_s
-      when center? != nil
+      when center?
         "5"
-      when opposite_corner != nil
+      when opposite_corner
         opposite_corner
-      when corner != nil
+      when corner
         (corner + 1).to_s
       else
         until !board.taken?(input)
