@@ -86,6 +86,7 @@ module Players
       end
       if win != nil
         block_index = win.find {|index| board.cells[index] == " "}
+        block_index
       end
     end
 
