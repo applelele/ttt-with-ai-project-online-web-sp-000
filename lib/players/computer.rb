@@ -82,7 +82,7 @@ module Players
 
     def blocking_move
       win = WIN_COMBINATIONS.find do |win_combo|
-        (board.cells[win_combo[0]] == opponent && board.cells[win_combo[1]] == opponent && board.cells[win_combo[2]] == " ") || (board.cells[win_combo[0]] == opponent && board.cells[win_combo[2]] == opponent && board.cells[win_combo[1]] == " ") #|| (board.cells[win_combo[2]] == opponent && board.cells[win_combo[1]] == opponent && board.cells[win_combo[0]] == " ")
+        (board.cells[win_combo[0]] == opponent && board.cells[win_combo[1]] == opponent && board.cells[win_combo[2]] == " ") || (board.cells[win_combo[0]] == opponent && board.cells[win_combo[2]] == opponent && board.cells[win_combo[1]] == " ") || (board.cells[win_combo[2]] == opponent && board.cells[win_combo[1]] == opponent && board.cells[win_combo[0]] == " ")
       end
       if win != nil
         block_index = win.find {|index| board.cells[index] == " "}
