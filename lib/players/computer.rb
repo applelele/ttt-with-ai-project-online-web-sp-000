@@ -76,7 +76,7 @@ module Players
         (board.cells[win_combo[0]] == token && board.cells[win_combo[1]] == token && board.cells[win_combo[2]] == " ") || (board.cells[win_combo[0]] == token && board.cells[win_combo[2]] == token && board.cells[win_combo[1]] == " ") || (board.cells[win_combo[2]] == token && board.cells[win_combo[1]] == token && board.cells[win_combo[0]] == " ")
       end
       if win != nil
-        win_index.to_i = win.find {|index| board.cells[index] == " "}
+        win_index = win.find {|index| board.cells[index] == " "}
       end
     end
 
@@ -85,7 +85,7 @@ module Players
         (board.cells[win_combo[0]] == opponent && board.cells[win_combo[1]] == opponent && board.cells[win_combo[2]] == " ") || (board.cells[win_combo[0]] == opponent && board.cells[win_combo[2]] == opponent && board.cells[win_combo[1]] == " ") || (board.cells[win_combo[2]] == opponent && board.cells[win_combo[1]] == opponent && board.cells[win_combo[0]] == " ")
       end
       if win != nil
-        block_index.to_i = win.find {|index| board.cells[index] == " "}
+        block_index = win.find {|index| board.cells[index] == " "}
       end
     end
 
